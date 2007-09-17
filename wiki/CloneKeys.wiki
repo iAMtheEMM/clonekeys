@@ -1,0 +1,24 @@
+#summary Native Mac OS X application which sends incoming keystrokes to multiple applications.
+
+= Introduction =
+
+CloneKeys duplicates (clones) incoming keystrokes and sends them to the applications setup in the main CloneKeys configuration window.
+
+This is mostly useful for multi-boxing in games. (Open up multiple copies of World of Warcraft and use CloneKeys to send the same keystrokes to multiple windows simultaneously.)
+
+= Details =
+
+Basic instructions for use:
+
+  # Start up multiple copies of your favorite game. (Say *World of Warcraft*)
+  # Start up *CloneKeys*
+  # Click *Add* button in the *CloneKeys* toolbar.
+    * Click a *World of Warcraft* game window
+  # Repeat step 3 as needed
+  # Play
+
+
+ 
+ 
+ 
+ 
