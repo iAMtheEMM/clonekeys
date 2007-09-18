@@ -21,11 +21,11 @@ Basic instructions for use:
 
 Possible improvements / plans for the future:
 
-  * Warn if "Enable access for assistive devices" isn't checked under Universal Access system preferences.
   * Cross-machine sending. Cross-compatiable with keyclone? Discuss with keyclone author.
   * Auto-add preference. (Auto-add World of Warcraft applications as they start-up.)
   * Make start/stop hotkey preference actually work.
 
+ 
  
  
  
