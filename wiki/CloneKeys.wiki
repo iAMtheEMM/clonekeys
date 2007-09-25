@@ -23,7 +23,7 @@ Possible improvements / plans for the future:
 
   * Cross-machine sending. Cross-compatiable with keyclone? Discuss with keyclone author.
   * Addition of keymaps? Not sure they are necessary, since creative key binding / unbinding in WoW usually accomplishes the same thing.  
-
+  * Integrated xkeys support... xkeys support on the Mac is decidedly blah, so integrating support directly into CloneKeys might be a good thing.
 
  
  
