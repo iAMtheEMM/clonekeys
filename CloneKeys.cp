@@ -337,7 +337,7 @@ static OSStatus MonitorHandler( EventHandlerCallRef inRef, EventRef inEvent, voi
 				if ((*index).currentProcess == false)
 				{
 					err = AXUIElementPostKeyboardEvent((*index).application, charCode, keyCode, keyDown);
-					err = AXUIElementPostKeyboardEvent((*index).application, charCode, keyCode, keyDown);
+					//err = AXUIElementPostKeyboardEvent((*index).application, charCode, keyCode, keyDown);
 					broadcasted = true;
 					//log_err(err);
 				}
