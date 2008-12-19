@@ -29,6 +29,7 @@
 #include "CloneKeys.h"
 
 MainWindow *main_wind;
+void focusFirstWindowOfPid(pid_t pid);
 
 //--------------------------------------------------------------------------------------------
 void log_err(AXError err)
@@ -291,6 +292,15 @@ static OSStatus MonitorHandler( EventHandlerCallRef inRef, EventRef inEvent, voi
 						(*index).currentProcess = false;
 					}
 				}
+
+				for(index = CloneKeysProcessList.begin(); index != CloneKeysProcessList.end(); ++index) {
+					if (!(*index).currentProcess) {
+				        // tell the first window of every background broacastee it has focus
+						pid_t cur_pid;
+						GetProcessPID(&((*index).psn), &cur_pid);
+						focusFirstWindowOfPid(cur_pid);
+					}
+				}
 			}
 			if (GetEventKind(inEvent) == kEventAppTerminated)
 			{
@@ -380,6 +390,52 @@ static OSStatus MonitorHandler( EventHandlerCallRef inRef, EventRef inEvent, voi
 		result = noErr;
 
 	return result;
+}
+
+// focus on the first titled window of the specified PID
+void focusFirstWindowOfPid(pid_t pid)
+{
+	AXUIElementRef appRef = AXUIElementCreateApplication(pid);
+	
+	CFArrayRef winRefs;
+	AXUIElementCopyAttributeValues(appRef, kAXWindowsAttribute, 0, 255, &winRefs);
+	if (!winRefs) return;
+	
+	for (int i = 0; i < CFArrayGetCount(winRefs); i++)
+	{
+		AXUIElementRef winRef = (AXUIElementRef)CFArrayGetValueAtIndex(winRefs, i);
+		CFStringRef titleRef = NULL;
+		AXUIElementCopyAttributeValue( winRef, kAXTitleAttribute, (const void**)&titleRef);
+		
+		char buf[1024];
+		buf[0] = '\0';
+		if (!titleRef)
+		{
+			strcpy(buf, "null");
+		}
+		if (!CFStringGetCString(titleRef, buf, 1023, kCFStringEncodingUTF8)) return;
+		CFRelease(titleRef);
+		
+		if (strlen(buf) != 0)
+		{
+			AXError result = AXUIElementSetAttributeValue(winRef, kAXFocusedAttribute, kCFBooleanTrue);
+			// CFRelease(winRef);
+			// syslog(LOG_NOTICE, "result %d of setting window %s focus of pid %d", result, buf, pid);
+			if (result != 0)
+			{
+				// syslog(LOG_NOTICE, "result %d of setting window %s focus of pid %d", result, buf, pid);
+			}
+			break;
+		}
+		else {
+			// syslog(LOG_NOTICE, "Skipping setting window %s focus of pid %d", buf, pid);
+		}
+	}
+
+	AXUIElementSetAttributeValue(appRef, kAXFocusedApplicationAttribute, kCFBooleanTrue);
+
+	CFRelease(winRefs);
+	CFRelease(appRef);
 }
 
 //--------------------------------------------------------------------------------------------
