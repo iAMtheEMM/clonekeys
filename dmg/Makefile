@@ -19,7 +19,7 @@
 ################################################################################
 
 NAME=CloneKeys
-VERSION=0.2beta
+VERSION=0.2b.beta
 
 SOURCE_DIR=../build/Release
 SOURCE_FILES=CloneKeys.app COPYING # README
@@ -63,7 +63,7 @@ $(MASTER_DMG): $(WC_DMG) $(addprefix $(SOURCE_DIR)/,$(SOURCE_FILES))
 	done
 	#rm -f "$@"
 	#hdiutil create -srcfolder "$(WC_DIR)" -format UDZO -imagekey zlib-level=9 "$@" -volname "$(NAME) $(VERSION)" -scrub -quiet
-	WC_DEV=`hdiutil info | grep "$(WC_DIR)" | grep "Apple_HFS" | awk '{print $$1}'` && \
+	WC_DEV=`hdiutil info | grep "$(WC_DIR)" | grep "disk" | awk '{print $$1}'` && \
 	hdiutil detach $$WC_DEV -quiet -force
 	rm -f "$(MASTER_DMG)"
 	hdiutil convert "$(WC_DMG)" -quiet -format UDZO -imagekey zlib-level=9 -o "$@"
