@@ -19,7 +19,7 @@
 ################################################################################
 
 NAME=CloneKeys
-VERSION=0.2b.beta
+VERSION=0.5.beta
 
 SOURCE_DIR=../build/Release
 SOURCE_FILES=CloneKeys.app COPYING # README
