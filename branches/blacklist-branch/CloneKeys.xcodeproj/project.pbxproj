@@ -1,0 +1,358 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 42;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5048396209E3303100765E4B /* TWindow.cp in Sources */ = {isa = PBXBuildFile; fileRef = 5048395709E3302200765E4B /* TWindow.cp */; };
+		5048396309E3303100765E4B /* TEventHandler.cp in Sources */ = {isa = PBXBuildFile; fileRef = 5048395909E3302200765E4B /* TEventHandler.cp */; };
+		5048396409E3303100765E4B /* TApplication.cp in Sources */ = {isa = PBXBuildFile; fileRef = 5048395D09E3302200765E4B /* TApplication.cp */; };
+		5048396509E3303100765E4B /* TNib.cp in Sources */ = {isa = PBXBuildFile; fileRef = 5048395E09E3302200765E4B /* TNib.cp */; };
+		5048396609E3303100765E4B /* TCarbonEvent.cp in Sources */ = {isa = PBXBuildFile; fileRef = 5048395F09E3302200765E4B /* TCarbonEvent.cp */; };
+		8D0C4E8D0486CD37000505A6 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0867D6AAFE840B52C02AAC07 /* InfoPlist.strings */; };
+		8D0C4E8E0486CD37000505A6 /* main.nib in Resources */ = {isa = PBXBuildFile; fileRef = 02345980000FD03B11CA0E72 /* main.nib */; };
+		8D0C4E900486CD37000505A6 /* CloneKeys.cp in Sources */ = {isa = PBXBuildFile; fileRef = 20286C2BFDCF999611CA2CEA /* CloneKeys.cp */; settings = {ATTRIBUTES = (); }; };
+		8D0C4E920486CD37000505A6 /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20286C33FDCF999611CA2CEA /* Carbon.framework */; };
+		B3BF8DF11291C23B00DD9B72 /* blacklist.ico in Resources */ = {isa = PBXBuildFile; fileRef = B3BF8DF01291C23B00DD9B72 /* blacklist.ico */; };
+		C5918B570C99DCA000EA0F4F /* clonekeys2.icns in Resources */ = {isa = PBXBuildFile; fileRef = C5918B560C99DCA000EA0F4F /* clonekeys2.icns */; };
+		C5ADE5AA0CAB40C20079D96A /* COPYING in Resources */ = {isa = PBXBuildFile; fileRef = C5ADE5A90CAB40C20079D96A /* COPYING */; };
+		C5ADE6090CAB577E0079D96A /* TURLTextView.cp in Sources */ = {isa = PBXBuildFile; fileRef = C5ADE6070CAB577E0079D96A /* TURLTextView.cp */; };
+		C5ADE6250CAB598D0079D96A /* TObject.cp in Sources */ = {isa = PBXBuildFile; fileRef = C5ADE61F0CAB598D0079D96A /* TObject.cp */; };
+		C5ADE6260CAB598D0079D96A /* TRect.cp in Sources */ = {isa = PBXBuildFile; fileRef = C5ADE6210CAB598D0079D96A /* TRect.cp */; };
+		C5ADE6270CAB598D0079D96A /* TView.cp in Sources */ = {isa = PBXBuildFile; fileRef = C5ADE6230CAB598D0079D96A /* TView.cp */; };
+		C5C787450C9C8B9E00871977 /* add.icns in Resources */ = {isa = PBXBuildFile; fileRef = C5C787420C9C8B9E00871977 /* add.icns */; };
+		C5C787470C9C8B9E00871977 /* remove.icns in Resources */ = {isa = PBXBuildFile; fileRef = C5C787440C9C8B9E00871977 /* remove.icns */; };
+		C5C788D90C9CA34B00871977 /* override_active.icns in Resources */ = {isa = PBXBuildFile; fileRef = C5C788D70C9CA34B00871977 /* override_active.icns */; };
+		C5C788DA0C9CA34B00871977 /* override_inactive.icns in Resources */ = {isa = PBXBuildFile; fileRef = C5C788D80C9CA34B00871977 /* override_inactive.icns */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		0867D6ABFE840B52C02AAC07 /* English */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		1870340FFE93FCAF11CA0CD7 /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = English.lproj/main.nib; sourceTree = "<group>"; };
+		20286C2BFDCF999611CA2CEA /* CloneKeys.cp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CloneKeys.cp; sourceTree = "<group>"; };
+		20286C33FDCF999611CA2CEA /* Carbon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Carbon.framework; path = /System/Library/Frameworks/Carbon.framework; sourceTree = "<absolute>"; };
+		32DBCF6D0370B57F00C91783 /* CloneKeys_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CloneKeys_Prefix.pch; sourceTree = "<group>"; };
+		4A9504C8FFE6A3BC11CA0CBA /* ApplicationServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ApplicationServices.framework; path = /System/Library/Frameworks/ApplicationServices.framework; sourceTree = "<absolute>"; };
+		4A9504CAFFE6A41611CA0CBA /* CoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreServices.framework; path = /System/Library/Frameworks/CoreServices.framework; sourceTree = "<absolute>"; };
+		5048395709E3302200765E4B /* TWindow.cp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; name = TWindow.cp; path = HIFramework/TWindow.cp; sourceTree = "<group>"; };
+		5048395809E3302200765E4B /* TCarbonEvent.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = TCarbonEvent.h; path = HIFramework/TCarbonEvent.h; sourceTree = "<group>"; };
+		5048395909E3302200765E4B /* TEventHandler.cp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; name = TEventHandler.cp; path = HIFramework/TEventHandler.cp; sourceTree = "<group>"; };
+		5048395A09E3302200765E4B /* TNib.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = TNib.h; path = HIFramework/TNib.h; sourceTree = "<group>"; };
+		5048395B09E3302200765E4B /* TApplication.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = TApplication.h; path = HIFramework/TApplication.h; sourceTree = "<group>"; };
+		5048395C09E3302200765E4B /* TWindow.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = TWindow.h; path = HIFramework/TWindow.h; sourceTree = "<group>"; };
+		5048395D09E3302200765E4B /* TApplication.cp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; name = TApplication.cp; path = HIFramework/TApplication.cp; sourceTree = "<group>"; };
+		5048395E09E3302200765E4B /* TNib.cp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; name = TNib.cp; path = HIFramework/TNib.cp; sourceTree = "<group>"; };
+		5048395F09E3302200765E4B /* TCarbonEvent.cp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; name = TCarbonEvent.cp; path = HIFramework/TCarbonEvent.cp; sourceTree = "<group>"; };
+		5048396009E3302200765E4B /* TEventHandler.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = TEventHandler.h; path = HIFramework/TEventHandler.h; sourceTree = "<group>"; };
+		5048396109E3302200765E4B /* HIFramework.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = HIFramework.h; path = HIFramework/HIFramework.h; sourceTree = "<group>"; };
+		5048396D09E3307300765E4B /* CloneKeysProj.xcconfig */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.xcconfig; path = CloneKeysProj.xcconfig; sourceTree = "<group>"; };
+		5048396E09E3307300765E4B /* CloneKeysTarget.xcconfig */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.xcconfig; path = CloneKeysTarget.xcconfig; sourceTree = "<group>"; };
+		508344B209E5C41E0093A071 /* CloneKeys.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CloneKeys.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8D0C4E960486CD37000505A6 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B3BF8DF01291C23B00DD9B72 /* blacklist.ico */ = {isa = PBXFileReference; lastKnownFileType = image.ico; path = blacklist.ico; sourceTree = "<group>"; };
+		B3BF8DF81291DA4800DD9B72 /* BlackList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BlackList.h; sourceTree = "<group>"; };
+		C5918B560C99DCA000EA0F4F /* clonekeys2.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = clonekeys2.icns; sourceTree = "<group>"; };
+		C5ADE5A90CAB40C20079D96A /* COPYING */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = COPYING; sourceTree = "<group>"; };
+		C5ADE5E10CAB51090079D96A /* AboutBox.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = AboutBox.h; sourceTree = "<group>"; };
+		C5ADE6070CAB577E0079D96A /* TURLTextView.cp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; name = TURLTextView.cp; path = HIFramework/TURLTextView.cp; sourceTree = "<group>"; };
+		C5ADE6080CAB577E0079D96A /* TURLTextView.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = TURLTextView.h; path = HIFramework/TURLTextView.h; sourceTree = "<group>"; };
+		C5ADE61F0CAB598D0079D96A /* TObject.cp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; name = TObject.cp; path = HIFramework/TObject.cp; sourceTree = "<group>"; };
+		C5ADE6200CAB598D0079D96A /* TObject.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = TObject.h; path = HIFramework/TObject.h; sourceTree = "<group>"; };
+		C5ADE6210CAB598D0079D96A /* TRect.cp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; name = TRect.cp; path = HIFramework/TRect.cp; sourceTree = "<group>"; };
+		C5ADE6220CAB598D0079D96A /* TRect.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = TRect.h; path = HIFramework/TRect.h; sourceTree = "<group>"; };
+		C5ADE6230CAB598D0079D96A /* TView.cp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; name = TView.cp; path = HIFramework/TView.cp; sourceTree = "<group>"; };
+		C5ADE6240CAB598D0079D96A /* TView.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = TView.h; path = HIFramework/TView.h; sourceTree = "<group>"; };
+		C5C787420C9C8B9E00871977 /* add.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = add.icns; sourceTree = "<group>"; };
+		C5C787440C9C8B9E00871977 /* remove.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = remove.icns; sourceTree = "<group>"; };
+		C5C788D70C9CA34B00871977 /* override_active.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = override_active.icns; sourceTree = "<group>"; };
+		C5C788D80C9CA34B00871977 /* override_inactive.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = override_inactive.icns; sourceTree = "<group>"; };
+		C5D830770C94683B00056BB8 /* CloneKeys.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CloneKeys.h; sourceTree = "<group>"; };
+		C5D830970C9477D800056BB8 /* Preferences.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Preferences.h; sourceTree = "<group>"; };
+		C5D8D8360C9DD84800C54E24 /* CKProcess.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CKProcess.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8D0C4E910486CD37000505A6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D0C4E920486CD37000505A6 /* Carbon.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		195DF8CFFE9D517E11CA2CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C5D8D8360C9DD84800C54E24 /* CKProcess.h */,
+				508344B209E5C41E0093A071 /* CloneKeys.app */,
+				C5ADE5E10CAB51090079D96A /* AboutBox.h */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		20286C29FDCF999611CA2CEA /* CloneKeys */ = {
+			isa = PBXGroup;
+			children = (
+				5048396909E3304600765E4B /* Configuration Files */,
+				20286C2AFDCF999611CA2CEA /* Sources */,
+				20286C2CFDCF999611CA2CEA /* Resources */,
+				20286C32FDCF999611CA2CEA /* External Frameworks and Libraries */,
+				195DF8CFFE9D517E11CA2CBB /* Products */,
+			);
+			name = CloneKeys;
+			sourceTree = "<group>";
+		};
+		20286C2AFDCF999611CA2CEA /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				B3BF8DF01291C23B00DD9B72 /* blacklist.ico */,
+				C5ADE5A90CAB40C20079D96A /* COPYING */,
+				C5D830970C9477D800056BB8 /* Preferences.h */,
+				C5D830770C94683B00056BB8 /* CloneKeys.h */,
+				C5918B560C99DCA000EA0F4F /* clonekeys2.icns */,
+				C5C788D70C9CA34B00871977 /* override_active.icns */,
+				C5C788D80C9CA34B00871977 /* override_inactive.icns */,
+				C5C787420C9C8B9E00871977 /* add.icns */,
+				C5C787440C9C8B9E00871977 /* remove.icns */,
+				32DBCF6D0370B57F00C91783 /* CloneKeys_Prefix.pch */,
+				20286C2BFDCF999611CA2CEA /* CloneKeys.cp */,
+				2229D7BF09C7779A0058DAED /* HIFramework */,
+				B3BF8DF81291DA4800DD9B72 /* BlackList.h */,
+			);
+			name = Sources;
+			sourceTree = "<group>";
+		};
+		20286C2CFDCF999611CA2CEA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				8D0C4E960486CD37000505A6 /* Info.plist */,
+				0867D6AAFE840B52C02AAC07 /* InfoPlist.strings */,
+				02345980000FD03B11CA0E72 /* main.nib */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		20286C32FDCF999611CA2CEA /* External Frameworks and Libraries */ = {
+			isa = PBXGroup;
+			children = (
+				20286C33FDCF999611CA2CEA /* Carbon.framework */,
+				4A9504CAFFE6A41611CA0CBA /* CoreServices.framework */,
+				4A9504C8FFE6A3BC11CA0CBA /* ApplicationServices.framework */,
+			);
+			name = "External Frameworks and Libraries";
+			sourceTree = "<group>";
+		};
+		2229D7BF09C7779A0058DAED /* HIFramework */ = {
+			isa = PBXGroup;
+			children = (
+				5048395709E3302200765E4B /* TWindow.cp */,
+				5048395809E3302200765E4B /* TCarbonEvent.h */,
+				5048395909E3302200765E4B /* TEventHandler.cp */,
+				5048395A09E3302200765E4B /* TNib.h */,
+				5048395B09E3302200765E4B /* TApplication.h */,
+				C5ADE6070CAB577E0079D96A /* TURLTextView.cp */,
+				C5ADE6080CAB577E0079D96A /* TURLTextView.h */,
+				5048395C09E3302200765E4B /* TWindow.h */,
+				5048395D09E3302200765E4B /* TApplication.cp */,
+				C5ADE61F0CAB598D0079D96A /* TObject.cp */,
+				C5ADE6200CAB598D0079D96A /* TObject.h */,
+				C5ADE6210CAB598D0079D96A /* TRect.cp */,
+				C5ADE6220CAB598D0079D96A /* TRect.h */,
+				C5ADE6230CAB598D0079D96A /* TView.cp */,
+				C5ADE6240CAB598D0079D96A /* TView.h */,
+				5048395E09E3302200765E4B /* TNib.cp */,
+				5048395F09E3302200765E4B /* TCarbonEvent.cp */,
+				5048396009E3302200765E4B /* TEventHandler.h */,
+				5048396109E3302200765E4B /* HIFramework.h */,
+			);
+			name = HIFramework;
+			sourceTree = "<group>";
+		};
+		5048396909E3304600765E4B /* Configuration Files */ = {
+			isa = PBXGroup;
+			children = (
+				5048396D09E3307300765E4B /* CloneKeysProj.xcconfig */,
+				5048396E09E3307300765E4B /* CloneKeysTarget.xcconfig */,
+			);
+			name = "Configuration Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8D0C4E890486CD37000505A6 /* CloneKeys */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C0E91AC508A95435008D54AB /* Build configuration list for PBXNativeTarget "CloneKeys" */;
+			buildPhases = (
+				8D0C4E8C0486CD37000505A6 /* Resources */,
+				8D0C4E8F0486CD37000505A6 /* Sources */,
+				8D0C4E910486CD37000505A6 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CloneKeys;
+			productInstallPath = "$(HOME)/Applications";
+			productName = CloneKeys;
+			productReference = 508344B209E5C41E0093A071 /* CloneKeys.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		20286C28FDCF999611CA2CEA /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = C0E91AC908A95435008D54AB /* Build configuration list for PBXProject "CloneKeys" */;
+			compatibilityVersion = "Xcode 2.4";
+			developmentRegion = English;
+			hasScannedForEncodings = 1;
+			knownRegions = (
+				English,
+				Japanese,
+				French,
+				German,
+			);
+			mainGroup = 20286C29FDCF999611CA2CEA /* CloneKeys */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8D0C4E890486CD37000505A6 /* CloneKeys */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8D0C4E8C0486CD37000505A6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D0C4E8D0486CD37000505A6 /* InfoPlist.strings in Resources */,
+				8D0C4E8E0486CD37000505A6 /* main.nib in Resources */,
+				C5918B570C99DCA000EA0F4F /* clonekeys2.icns in Resources */,
+				C5C787450C9C8B9E00871977 /* add.icns in Resources */,
+				C5C787470C9C8B9E00871977 /* remove.icns in Resources */,
+				C5C788D90C9CA34B00871977 /* override_active.icns in Resources */,
+				C5C788DA0C9CA34B00871977 /* override_inactive.icns in Resources */,
+				C5ADE5AA0CAB40C20079D96A /* COPYING in Resources */,
+				B3BF8DF11291C23B00DD9B72 /* blacklist.ico in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8D0C4E8F0486CD37000505A6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D0C4E900486CD37000505A6 /* CloneKeys.cp in Sources */,
+				5048396209E3303100765E4B /* TWindow.cp in Sources */,
+				5048396309E3303100765E4B /* TEventHandler.cp in Sources */,
+				5048396409E3303100765E4B /* TApplication.cp in Sources */,
+				5048396509E3303100765E4B /* TNib.cp in Sources */,
+				5048396609E3303100765E4B /* TCarbonEvent.cp in Sources */,
+				C5ADE6090CAB577E0079D96A /* TURLTextView.cp in Sources */,
+				C5ADE6250CAB598D0079D96A /* TObject.cp in Sources */,
+				C5ADE6260CAB598D0079D96A /* TRect.cp in Sources */,
+				C5ADE6270CAB598D0079D96A /* TView.cp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		02345980000FD03B11CA0E72 /* main.nib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1870340FFE93FCAF11CA0CD7 /* English */,
+			);
+			name = main.nib;
+			sourceTree = "<group>";
+		};
+		0867D6AAFE840B52C02AAC07 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0867D6ABFE840B52C02AAC07 /* English */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C0E91AC608A95435008D54AB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5048396E09E3307300765E4B /* CloneKeysTarget.xcconfig */;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+			};
+			name = Debug;
+		};
+		C0E91AC708A95435008D54AB /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5048396E09E3307300765E4B /* CloneKeysTarget.xcconfig */;
+			buildSettings = {
+				DEAD_CODE_STRIPPING = YES;
+				INSTALL_PATH = "$(HOME)/Applications";
+				PRESERVE_DEAD_CODE_INITS_AND_TERMS = YES;
+			};
+			name = Release;
+		};
+		C0E91ACA08A95435008D54AB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5048396D09E3307300765E4B /* CloneKeysProj.xcconfig */;
+			buildSettings = {
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				SDKROOT = "$(DEVELOPER_SDK_DIR)/MacOSX10.6.sdk";
+				ZERO_LINK = YES;
+			};
+			name = Debug;
+		};
+		C0E91ACB08A95435008D54AB /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5048396D09E3307300765E4B /* CloneKeysProj.xcconfig */;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT_PRE_XCODE_3_1)";
+				ARCHS_STANDARD_32_BIT_PRE_XCODE_3_1 = "ppc i386";
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				OTHER_LDFLAGS = "";
+				SDKROOT = "$(DEVELOPER_SDK_DIR)/MacOSX10.6.sdk";
+				SEPARATE_STRIP = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C0E91AC508A95435008D54AB /* Build configuration list for PBXNativeTarget "CloneKeys" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C0E91AC608A95435008D54AB /* Debug */,
+				C0E91AC708A95435008D54AB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C0E91AC908A95435008D54AB /* Build configuration list for PBXProject "CloneKeys" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C0E91ACA08A95435008D54AB /* Debug */,
+				C0E91ACB08A95435008D54AB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 20286C28FDCF999611CA2CEA /* Project object */;
+}
