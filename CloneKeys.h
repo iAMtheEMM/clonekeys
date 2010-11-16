@@ -34,11 +34,14 @@
 #include "TWindow.h"
 #include "AboutBox.h"
 #include "Preferences.h"
+#include "BlackList.h"
 #include "CKProcess.h"
+
 
 #define kToolbarAddButton		CFSTR("com.rjenkins.clonekeys.add")
 #define kToolbarRemoveButton	CFSTR("com.rjenkins.clonekeys.remove")
 #define kToolbarOverrideButton	CFSTR("com.rjenkins.clonekeys.override")
+#define kToolbarBlacklistButton CFSTR("com.rjenkins.clonekeys.blacklist")
 
 #define kWindowUnifiedTitleAndToolbarAttribute 1 << 7
 
@@ -47,6 +50,7 @@ enum
 	kCmdAddWindow		= 'awin',
 	kCmdRemoveWindow	= 'rwin',
 	kCmdOverride		= 'over',
+	kCmdBlacklist		= 'blak',
 	kCmdDataPanel		= 'wins'
 };
 

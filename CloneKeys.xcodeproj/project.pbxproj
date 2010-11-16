@@ -16,6 +16,7 @@
 		8D0C4E8E0486CD37000505A6 /* main.nib in Resources */ = {isa = PBXBuildFile; fileRef = 02345980000FD03B11CA0E72 /* main.nib */; };
 		8D0C4E900486CD37000505A6 /* CloneKeys.cp in Sources */ = {isa = PBXBuildFile; fileRef = 20286C2BFDCF999611CA2CEA /* CloneKeys.cp */; settings = {ATTRIBUTES = (); }; };
 		8D0C4E920486CD37000505A6 /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20286C33FDCF999611CA2CEA /* Carbon.framework */; };
+		B3BF8DF11291C23B00DD9B72 /* blacklist.ico in Resources */ = {isa = PBXBuildFile; fileRef = B3BF8DF01291C23B00DD9B72 /* blacklist.ico */; };
 		C5918B570C99DCA000EA0F4F /* clonekeys2.icns in Resources */ = {isa = PBXBuildFile; fileRef = C5918B560C99DCA000EA0F4F /* clonekeys2.icns */; };
 		C5ADE5AA0CAB40C20079D96A /* COPYING in Resources */ = {isa = PBXBuildFile; fileRef = C5ADE5A90CAB40C20079D96A /* COPYING */; };
 		C5ADE6090CAB577E0079D96A /* TURLTextView.cp in Sources */ = {isa = PBXBuildFile; fileRef = C5ADE6070CAB577E0079D96A /* TURLTextView.cp */; };
@@ -51,6 +52,8 @@
 		5048396E09E3307300765E4B /* CloneKeysTarget.xcconfig */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.xcconfig; path = CloneKeysTarget.xcconfig; sourceTree = "<group>"; };
 		508344B209E5C41E0093A071 /* CloneKeys.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CloneKeys.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D0C4E960486CD37000505A6 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B3BF8DF01291C23B00DD9B72 /* blacklist.ico */ = {isa = PBXFileReference; lastKnownFileType = image.ico; path = blacklist.ico; sourceTree = "<group>"; };
+		B3BF8DF81291DA4800DD9B72 /* BlackList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BlackList.h; sourceTree = "<group>"; };
 		C5918B560C99DCA000EA0F4F /* clonekeys2.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = clonekeys2.icns; sourceTree = "<group>"; };
 		C5ADE5A90CAB40C20079D96A /* COPYING */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = COPYING; sourceTree = "<group>"; };
 		C5ADE5E10CAB51090079D96A /* AboutBox.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = AboutBox.h; sourceTree = "<group>"; };
@@ -108,6 +111,7 @@
 		20286C2AFDCF999611CA2CEA /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				B3BF8DF01291C23B00DD9B72 /* blacklist.ico */,
 				C5ADE5A90CAB40C20079D96A /* COPYING */,
 				C5D830970C9477D800056BB8 /* Preferences.h */,
 				C5D830770C94683B00056BB8 /* CloneKeys.h */,
@@ -119,6 +123,7 @@
 				32DBCF6D0370B57F00C91783 /* CloneKeys_Prefix.pch */,
 				20286C2BFDCF999611CA2CEA /* CloneKeys.cp */,
 				2229D7BF09C7779A0058DAED /* HIFramework */,
+				B3BF8DF81291DA4800DD9B72 /* BlackList.h */,
 			);
 			name = Sources;
 			sourceTree = "<group>";
@@ -206,7 +211,14 @@
 			isa = PBXProject;
 			buildConfigurationList = C0E91AC908A95435008D54AB /* Build configuration list for PBXProject "CloneKeys" */;
 			compatibilityVersion = "Xcode 2.4";
+			developmentRegion = English;
 			hasScannedForEncodings = 1;
+			knownRegions = (
+				English,
+				Japanese,
+				French,
+				German,
+			);
 			mainGroup = 20286C29FDCF999611CA2CEA /* CloneKeys */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -229,6 +241,7 @@
 				C5C788D90C9CA34B00871977 /* override_active.icns in Resources */,
 				C5C788DA0C9CA34B00871977 /* override_inactive.icns in Resources */,
 				C5ADE5AA0CAB40C20079D96A /* COPYING in Resources */,
+				B3BF8DF11291C23B00DD9B72 /* blacklist.ico in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

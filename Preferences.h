@@ -51,6 +51,7 @@ static WindowRef	grab_new_hotkey;
 static UInt32		newOverrideModifiers;
 static UInt32		newOverrideKey;
 
+
 // Our Preferences window class
 class Preferences : public TWindow
 {

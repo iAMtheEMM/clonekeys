@@ -535,7 +535,7 @@ CarbonApp::HandleCommand( const HICommandExtended& inCommand )
 			Preferences::Create();
 			result = true;
 			break;
-        
+			
         default:
             return false;
     }
@@ -696,6 +696,9 @@ MainWindow::HandleCommand( const HICommandExtended& inCommand )
 			result = true;
 			break;
 		
+		case kCmdBlacklist:
+			BlackList::Create();
+			break;
 		default:
             result = false;
     }
@@ -783,6 +786,8 @@ MainWindow::GetToolbarDefaultItems( CFMutableArrayRef array )
 	CFArrayAppendValue( array, kToolbarRemoveButton );
 	CFArrayAppendValue( array, kHIToolbarSpaceIdentifier );
 	CFArrayAppendValue( array, kToolbarOverrideButton );
+	CFArrayAppendValue( array, kHIToolbarSpaceIdentifier );
+	CFArrayAppendValue( array, kToolbarBlacklistButton);
 	CFArrayAppendValue( array, kHIToolbarFlexibleSpaceIdentifier );
 	//CFArrayAppendValue( array, kToolbarConnection );
 }
@@ -861,7 +866,26 @@ MainWindow::CreateToolbarItemForIdentifier( CFStringRef identifier, CFTypeRef co
 			this->overrideToolbarItem = item;
 		}
 	}
-
+	if (CFStringCompare( kToolbarBlacklistButton, identifier, kCFCompareBackwards) == kCFCompareEqualTo )
+	{
+		if (HIToolbarItemCreate(identifier, kHIToolbarItemCantBeRemoved, &item) == noErr)
+		{
+			IconRef icon;
+			static bool sRegisteredIcon;
+			
+			if (!sRegisteredIcon)
+			{
+				RegisterIcon('CKCB', 'blak', "blacklist.ico");
+				sRegisteredIcon = true;
+			}
+			GetIconRef( kOnSystemDisk, 'CKCB', 'blak', &icon);
+			HIToolbarItemSetLabel( item, CFSTR("Blacklist"));
+			HIToolbarItemSetIconRef( item, icon );
+			HIToolbarItemSetCommandID( item, 'blak');
+			ReleaseIconRef( icon );
+		}
+	}
+	
 	return item;
 }
 
@@ -1363,5 +1387,24 @@ AboutBox::HandleCommand( const HICommandExtended& inCommand )
 	//syslog(LOG_NOTICE, "sOverride = [%s]", CFStringGetCStringPtr(sOverride, kCFStringEncodingMacRoman));
 	
 	return result;
+}
+
+void BlackList::Create()
+{
+	//look at preferences::create() to get control!
+	
+}
+
+Boolean BlackList::HandleCommand(const HICommandExtended &inCommand)
+{
+	return true;
+}
+
+OSStatus BlackList::HandleEvent(EventHandlerRef inRef, TCarbonEvent& inEvent)
+{
+	OSStatus	result = eventNotHandledErr;
+	
+	return result;
+	
 }
 
