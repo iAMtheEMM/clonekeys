@@ -1392,7 +1392,39 @@ AboutBox::HandleCommand( const HICommandExtended& inCommand )
 void BlackList::Create()
 {
 	//look at preferences::create() to get control!
+	ControlRef	control;
+	HIViewRef rootRef;
+	CFStringRef sOverride;
 	
+	BlackList *wind = new BlackList();
+
+	// Add some additional events so that we can pass them on to the "global" event handler.
+	EventTypeSpec   kEvents[] =
+	{
+		{ kEventClassKeyboard, kEventRawKeyDown },
+		{ kEventClassKeyboard, kEventRawKeyUp },
+		{ kEventClassKeyboard, kEventRawKeyRepeat },
+		{ kEventClassKeyboard, kEventRawKeyModifiersChanged }
+	};
+	
+	wind->RegisterForEvents(GetEventTypeCount(kEvents), kEvents);
+	
+	rootRef = HIViewGetRoot(*wind);
+	
+	HIViewFindByID(rootRef, kButtonEnterKey, &control);
+	SetControlValue(control, kBlackButtonEnterKey);
+	
+	HIViewFindByID(rootRef, kTextKey, &control);
+	SetControlValue(control, kBlackTextKey);
+	
+	HIViewFindByID(rootRef, kButtonAdd, &control);
+	SetControlValue(control, kBlackButtonAdd);
+	
+	HIViewFindByID(rootRef, kDataKeys, &control);
+	SetControlValue(control, kBlackData);
+	
+	
+	wind->Show();
 }
 
 Boolean BlackList::HandleCommand(const HICommandExtended &inCommand)
